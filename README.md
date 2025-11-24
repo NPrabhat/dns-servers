@@ -56,7 +56,7 @@ HaGeZi DNS is a non-commercial, publicly accessible DNS resolver service operate
 - This service is not affiliated with any commercial provider, government body, or the DNS4EU consortium.
 - Use of the service constitutes acceptance of these terms.
 
-For privacy matters or to request information on data processing, contact [support@hagezi.org](mailto:support@hagezi.org).
+For privacy matters or to request information on data processing, contact [privacy@hagezi.org](mailto:privacy@hagezi.org).
 
 Service operator: HaGezi - [mail@hagezi.org](mailto:mail@hagezi.org), maintained by a private individual in accordance with Article 4 and 13/14 GDPR for non-commercial volunteer projects within the EU.
 
