@@ -36,7 +36,7 @@ HaGeZi DNS offers free, non-commercial public DNS resolvers designed and operate
 
 ## Server Locations & Access
 
-| Location           | Protocols     | Endpoint/URL                          | Apple Config        | Good EU Latency From    |
+| Location           | Protocols     | Endpoint/URL                          | Apple<br>Config        | Good<br>EU Latency    |
 |--------------------|---------------|-------------------------------------|-----------------------|-------------------------|
 | Germany, Falkenstein| DoH/DoH3      | `https://root.hagezi.org/dns-query`   | [Link](https://raw.githubusercontent.com/hagezi/dns-servers/refs/heads/main/mobileconfig/root-hagezi-org.mobileconfig) [QR](/mobileconfig/root-hagezi-org.mobileconfig.png)    | DE, PL, CZ, AT, NL, DK, FR, LU, BE |
 |                    | DoT/QUIC      | `root.hagezi.org`                     |                       |                         |
