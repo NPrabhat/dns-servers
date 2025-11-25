@@ -65,6 +65,7 @@ If you see any IP addresses in your [DNS leak test](https://dnscheck.tools) resu
 
 - **DNS Leak Test:** [dnscheck.tools](https://dnscheck.tools) - [dnsleaktest.com](https://www.dnsleaktest.com/) - [browserleaks.com](https://browserleaks.com/dns)
 - **DNS Nameserver Spoofability Test:** [GRC](https://www.grc.com/dns/dns.htm)
+- **DNS Rebind Test:** [ControlD](https://controld.com/tools/dns-rebind-test)
 
 ## Getting Help
 
