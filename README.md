@@ -85,6 +85,6 @@ HaGeZi DNS is a non-commercial, publicly accessible DNS resolver service operate
 
 For privacy matters or to request information on data processing, contact [privacy@hagezi.org](mailto:privacy@hagezi.org).
 
-Service operator: HaGezi - [mail@hagezi.org](mailto:mail@hagezi.org), maintained by a private individual in accordance with Article 4 and 13/14 GDPR for non-commercial volunteer projects within the EU.
+**Service operator:** HaGeZi [mail@hagezi.org](mailto:mail@hagezi.org) - maintained by a private individual in accordance with Article 4 and 13/14 GDPR for non-commercial volunteer projects within the EU.
 
 ---
