@@ -43,7 +43,7 @@ HaGeZi DNS employs a balanced blocking strategy to deliver robust privacy and se
 
 - **Blocked Mozilla Firefox canary domain**, answered with `NXDOMAIN` - prevents Mozilla Firefox from automatically switching to DNS-over-HTTPS in its settings.
 - **Blocked Google Chrome preflight mode for prefetching**, answered with `NXDOMAIN` - applies DNS filtering to resources preloaded via Chrome’s private prefetch proxy.
-- **Allowed acecess to Apple iCloud Private Relay** - supports macOS and iOS Mail Privacy Protection and Safari Tracking Prevention.
+- **Allowed access to Apple iCloud Private Relay** - supports macOS and iOS Mail Privacy Protection and Safari Tracking Prevention.
 
 ## Server Locations & Access
 
