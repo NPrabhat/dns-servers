@@ -51,14 +51,20 @@ HaGeZi DNS employs a balanced blocking strategy to deliver robust privacy and se
 |--------------------|---------------|-------------------------------------|-----------------------|-------------------------|
 | Germany, Falkenstein| DoH/DoH3      | `https://root.hagezi.org/dns-query`   | [Link](https://raw.githubusercontent.com/hagezi/dns-servers/refs/heads/main/mobileconfig/root-hagezi-org.mobileconfig) [QR](/mobileconfig/root-hagezi-org.mobileconfig.png)    | AT, BE, BG, CZ, DK, FR, DE, HU, IT, LU, NL, PL, SK, SI | 
 |                    | DoT/QUIC      | `root.hagezi.org`                     |                       |                         |
-| Germany, Nuremberg| DoH/DoH3      | `coming soon`   | [Link](#) [QR](#)    | AT, BE, HR, CZ, DK, FR, DE, HU, IT, LU, NL, PL, RO, SK, SI | 
-|                    | DoT/QUIC      | `coming soon`                     |                       |                         |
+| Germany, Nuremberg| DoH/DoH3      | `https://wurzn.hagezi.org/dns-query`   | [Link](https://raw.githubusercontent.com/hagezi/dns-servers/refs/heads/main/mobileconfig/wurzn-hagezi-org.mobileconfig) [QR](/mobileconfig/wurzn-hagezi-org.mobileconfig.png)    | AT, BE, HR, CZ, DK, FR, DE, HU, IT, LU, NL, PL, RO, SK, SI | 
+|                    | DoT/QUIC      | `wurzn.hagezi.org`                     |                       |                         |
 | Finland, Helsinki   | DoH/DoH3      | `https://juuri.hagezi.org/dns-query`  | [Link](https://raw.githubusercontent.com/hagezi/dns-servers/refs/heads/main/mobileconfig/juuri-hagezi-org.mobileconfig) [QR](/mobileconfig/juuri-hagezi-org.mobileconfig.png)    | DK, EE, FI, LV, LT, SE | 
 |                    | DoT/QUIC      | `juuri.hagezi.org`                    |                       |                         |
 
 EU member states that are less well covered by the current server locations: CY, GR, IE, MT, PT, ES
 > [!TIP]
 > For a general idea of the latency between your location and our server locations, we recommend using [WonderNetwork’s Global Ping Statistics](https://wondernetwork.com/pings). 
+> <br><br>
+> Example of a [WonderNetwork](https://wondernetwork.com/pings) compilation configured for Germany:
+> <br><br>
+> <img width="792" height="241" alt="Screenshot 2025-11-26 123938" src="https://github.com/user-attachments/assets/224dcd94-8801-48ca-97b1-8b22b16396ff" />
+> <br><br>
+> To optimize latency when choosing DNS servers, you can personally measure the response times by pinging each DNS server from your own connection. This approach factors in your specific network conditions, such as geographic location, ISP routing, and local congestion, giving you a practical, real-world latency measurement. By selecting the DNS server with the lowest ping time, you maximize responsiveness and reduce DNS query delays for your devices or infrastructure.
 
 ### Expected IP addresses
 
