@@ -5,7 +5,7 @@ HaGeZi DNS offers free, non-commercial public DNS resolvers designed and operate
 ## Features
 
 - EU-only hosting (Hetzner: Falkenstein, Nuremberg, Helsinki) and jurisdiction, with full GDPR and ENISA recommendations.
-- Entirely open-source stack: Technitium DNS with Unbound as upstream and a local root zone copy on Debian Linux.
+- Entirely open-source stack: [Technitium DNS](https://github.com/TechnitiumSoftware/DnsServer) with [Unbound](https://github.com/NLnetLabs/unbound) as upstream and a local root zone copy on Debian Linux.
 - Blocking level: Balanced (Ad, Tracking, Scam, Phishing, Malware)
 - Blocklists: [HaGeZi Multi Pro](https://github.com/hagezi/dns-blocklists#pro) & [HaGeZi Threat Intelligence Feeds](https://github.com/hagezi/dns-blocklists#tif)
 - No additional censorship, only security and privacy-oriented filtering.
