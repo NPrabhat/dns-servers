@@ -30,7 +30,8 @@ HaGeZi DNS offers free, non-commercial public DNS resolvers designed and operate
 
 - Hourly DNS statistics (processed and block domain rankings, per-client query counts) stored only in RAM, never written to disk and auto-deleted each hour or on service/server restart.<br>(Query counts per client are solely for rate limiting, no linkage to resolved/blocked domains or other details)
 - Error logging: Only domains failing to resolve (due to DNSSEC, server, timeout, etc. - resulting in SERVFAIL) are logged for up to 7 days for troubleshooting. No client IP addresses are included.
-
+- Uses an in-memory DNS cache for enhanced privacy. No query data is ever written to disk, and all entries are automatically cleared when they expire or the server restarts.
+  
 ## Filtering
 
 HaGeZi DNS employs a balanced blocking strategy to deliver robust privacy and security while minimizing unnecessary restrictions. This approach provides effective protection without excessive blocking, making it ideal for most users. The balance is achieved through the use of HaGeZi Multi Pro and HaGeZi Threat Intelligence Feed blocklists.
