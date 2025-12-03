@@ -73,7 +73,10 @@ EU member states that are less well covered by the current server locations: CY,
 - `159.69.155.94` - `2a01:4f8:1c1c:d363::1` (ptr:  `wurzn.hagezi.org`) - Hetzner Online GmbH - Nürnberg, Bavaria, DE
 - `95.217.163.17` - `2a01:4f9:c013:dc4e::1` (ptr:  `juuri.hagezi.org`) - Hetzner Online GmbH/HOS-GUN - Helsinki, Uusimaa, FI
 
-If you see any IP addresses in your [DNS leak test](https://dnscheck.tools) results other than those expected, it indicates that your device or network might be leaking DNS queries through fallback resolvers or directly to your ISP. This means DNS requests are bypassing your intended DNS protection, potentially exposing your browsing activity to external parties.
+> [!NOTE]
+> By default, the DNS servers internally prioritize IPv4 when contacting root servers. This enforces IPv4 transport for upstream root queries and causes tools like dnscheck.tools or browserleaks.com to display only IPv4 paths in resolver diagnostics. Client A and AAAA queries, however, remain unaffected due to full recursion.  
+
+If you see any IP addresses in your [DNS leak test](https://dnscheck.tools) results other than those expected, it indicates that your device or network might be leaking DNS queries through fallback resolvers or directly to your ISP. This means DNS requests are bypassing your intended DNS protection, potentially exposing your browsing activity to external parties. 
 
 ## Web-based DNS testing services
 
