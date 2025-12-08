@@ -66,6 +66,8 @@ EU member states that are less well covered by the current server locations: CY,
 > <img width="792" height="241" alt="Screenshot 2025-11-26 123938" src="https://github.com/user-attachments/assets/224dcd94-8801-48ca-97b1-8b22b16396ff" />
 > <br><br>
 > To optimize latency when choosing DNS servers, you can personally measure the response times by pinging each DNS server from your own connection. This approach factors in your specific network conditions, such as geographic location, ISP routing, and local congestion, giving you a practical, real-world latency measurement. By selecting the DNS server with the lowest ping time, you maximize responsiveness and reduce DNS query delays for your devices or infrastructure.
+> <br><br>
+> [Latency cheat sheet](latency.pdf) - This PDF summarizes measured network latency in milliseconds from six European PoPs (Amsterdam, Falkenstein, Frankfurt, Helsinki, Nürnberg, Vienna) to cities across European countries, highlighting the fastest location per city and EU membership status based on WonderNetwork ping data.
 
 ### Expected IP addresses
 
