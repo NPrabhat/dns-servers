@@ -57,7 +57,8 @@ HaGeZi DNS employs a balanced blocking strategy to deliver robust privacy and se
 | Finland, Helsinki   | DoH/DoH3      | `https://juuri.hagezi.org/dns-query`  | [Link](https://raw.githubusercontent.com/hagezi/dns-servers/refs/heads/main/mobileconfig/juuri-hagezi-org.mobileconfig) [QR](/mobileconfig/juuri-hagezi-org.mobileconfig.png)    | DK, EE, FI, LT, LV, NO, SE | 
 |                    | DoT/QUIC      | `juuri.hagezi.org`                    |                       |                         |
 
-EU member states that are less well covered by the current server locations: CY, GR, IE, MT, PT, ES
+EU and neighboring countries with limited coverage from current server locations: AD, CY, GE, IS, LI, MC, ME, PT, SM, TR
+
 > [!TIP]
 > For a general idea of the latency between your location and our server locations, we recommend using [WonderNetwork’s Global Ping Statistics](https://wondernetwork.com/pings). 
 > <br><br>
